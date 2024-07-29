@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="styleme.css"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    
+
+
+    <style>
+		
+
+			.faq {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .faq-item {
+            background-color: none;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .faq-question {
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .faq-answer {
+            margin-top: 10px;
+            display: none;
+        }
+        .faq-item.open .faq-answer {
+            display: block;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+                margin: 10px;
+            }
+            .faq-item {
+                padding: 10px;
+            }
+		}
+	</style>
+
+</head>
+
+<body>
+
+    <header class="header">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="responsive_gallery.html">GALLERY </a></li>
+
+            <li><a href="links.html">LINKS</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="faq.html">FAQ</a></li>                  
+        </ul>
+    </header>
+<br>
+
+    <div class="container">
+        <h2>FAQ </h2>
+		<p>click on the question below to see the answer </p><br>
+
+        <div class="faq">
+            <div class="faq-item">
+                <div class="faq-question">What is generative art?</div><br>
+                <div class="faq-answer">
+                    Generative art is a form of art that uses algorithms, computer systems, and automated processes to create works of art.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">How does an autonomous system work?</div><br>
+                <div class="faq-answer">
+                    An autonomous system is capable of operating independently without direct human intervention, making decisions and taking actions based on its own rules, programs, or algorithms.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">What is an algorithm?</div><br>
+                <div class="faq-answer">
+                    An algorithm is a step-by-step procedure that defines a set of instructions to be executed in a specific order to produce a desired result. An algorithm is a series of precise instructions that must be carried out in a certain order to achieve the intended outcome, and it can be implemented in different programming languages. The efficiency and the ability to adapt to different problem sizes are important aspects of an algorithm.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">What is a loop?</div><br>
+                <div class="faq-answer">
+                    Loops are a fundamental concept in programming that allow tasks to be repeated multiple times, and are essential for saving time and minimizing errors. Repetitive tasks are common in programming. Understanding loops is crucial for creating dynamic and versatile programs.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">What is a condition?</div><br>
+                <div class="faq-answer">
+                    A condition in programming is like a question the program asks to decide what to do next. If the answer is true, it does one thing, and if the answer is false, it does something else.
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <script>
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const faqItem = item.parentElement;
+                faqItem.classList.toggle('open');
+            });
+        });
+    </script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
